@@ -1,0 +1,195 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>山西秋行 · 景点攻略与抢票雷达</title>
+<style>
+:root{--bg:#f3f0e7;--paper:#fffdf7;--ink:#203b34;--muted:#66766f;--line:#d9ded7;--green:#1f6652;--rust:#a34d2f;--gold:#c68c32;--blue:#376b91;--soft:#edf4ef;--warn:#fff1d8}*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--ink);font:15px/1.68 -apple-system,BlinkMacSystemFont,"PingFang SC","Microsoft YaHei",sans-serif}a{color:var(--green);text-decoration:none}button,input,select{font:inherit}header{padding:34px max(5vw,20px) 28px;background:linear-gradient(135deg,#173e34,#285c4d);color:#fff}header h1{margin:4px 0 8px;font-size:clamp(28px,5vw,48px);letter-spacing:.04em}header p{max-width:920px;margin:0;color:#dcebe4}.eyebrow{font-size:12px;letter-spacing:.24em;color:#bcd9cd;text-transform:uppercase}.topnav{position:sticky;top:0;z-index:8;display:flex;gap:8px;overflow:auto;padding:10px max(4vw,16px);background:rgba(255,253,247,.96);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}.topnav a,.topnav button{white-space:nowrap;border:1px solid #baccc4;border-radius:999px;background:#fff;padding:8px 13px;color:var(--green);cursor:pointer}.topnav button.primary{background:var(--green);color:#fff;border-color:var(--green)}main{max-width:1240px;margin:auto;padding:20px}.hero-grid,.route-grid,.card-grid{display:grid;gap:14px}.hero-grid{grid-template-columns:repeat(4,1fr);margin-top:-8px}.metric,.panel,.spot{background:var(--paper);border:1px solid var(--line);border-radius:16px;box-shadow:0 8px 24px rgba(42,55,48,.05)}.metric{padding:18px}.metric b{display:block;font-size:26px;color:var(--green)}.metric small,.muted{color:var(--muted)}section{scroll-margin-top:72px;margin:26px 0}section>h2{font-size:24px;margin:0 0 12px}.panel{padding:20px}.alert{background:var(--warn);border-left:4px solid var(--gold);padding:14px 16px;margin:12px 0}.verified{background:#e6f4ec;color:#216044}.pattern{background:#edf2f7;color:#3b6482}.pending{background:#fff0d5;color:#855b17}.free{background:#eef4e4;color:#4c682d}.pill{display:inline-flex;align-items:center;padding:3px 9px;border-radius:999px;font-size:12px;font-weight:650;margin:0 4px 5px 0}.route-grid{grid-template-columns:repeat(4,1fr)}.day{border-top:4px solid var(--green);padding:16px;background:var(--paper);border-radius:12px}.day b{display:block}.day small{color:var(--muted)}.day ul{margin:8px 0 0;padding-left:18px}.toolbar{display:flex;gap:10px;flex-wrap:wrap;margin:10px 0 16px}.toolbar input,.toolbar select{min-height:42px;border:1px solid #bccbc4;border-radius:10px;background:#fff;padding:8px 12px}.toolbar input{flex:1;min-width:210px}.card-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.spot{overflow:hidden}.spot summary{cursor:pointer;list-style:none;padding:18px;display:flex;align-items:flex-start;justify-content:space-between;gap:12px}.spot summary::-webkit-details-marker{display:none}.spot summary h3{margin:0 0 4px;font-size:20px}.spot summary p{margin:0;color:var(--muted);font-size:13px}.spot summary:after{content:"＋";font-size:24px;color:var(--green)}.spot[open] summary:after{content:"－"}.spot .body{border-top:1px solid var(--line);padding:16px 18px 18px}.facts{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;margin-bottom:12px}.fact{background:#f6f7f3;border-radius:10px;padding:10px}.fact b{display:block;font-size:12px;color:var(--muted);margin-bottom:3px}.spot h4{margin:15px 0 4px;font-size:14px}.spot p{margin:4px 0}.actions{display:flex;gap:8px;flex-wrap:wrap;margin-top:14px}.actions a{border:1px solid #b9cbc2;border-radius:9px;padding:7px 11px;background:#fff}.timeline{display:grid;grid-template-columns:140px 1fr;gap:0}.event{display:contents}.event>*{padding:13px;border-bottom:1px solid var(--line)}.event time{font-weight:750;color:var(--rust)}.event.urgent>*{background:#fff7e8}.decision{display:grid;grid-template-columns:160px 1fr;gap:12px;padding:13px 0;border-bottom:1px solid var(--line)}.decision b{color:var(--rust)}.source-list{columns:2}.source-list li{break-inside:avoid;margin-bottom:8px}.hidden{display:none!important}.done{opacity:.55;text-decoration:line-through}@media(max-width:900px){.hero-grid,.route-grid{grid-template-columns:repeat(2,1fr)}.card-grid{grid-template-columns:1fr}.source-list{columns:1}}@media(max-width:560px){header{padding-top:24px}.hero-grid,.route-grid{grid-template-columns:1fr 1fr}.metric b{font-size:20px}.facts{grid-template-columns:1fr}.timeline{grid-template-columns:1fr}.event{display:block;border-bottom:1px solid var(--line)}.event>*{display:block;border:0;padding:5px 12px}.decision{grid-template-columns:1fr}.topnav{top:0}}@media print{.topnav,.toolbar,.actions,.download-note{display:none}.card-grid{grid-template-columns:1fr}.spot{break-inside:avoid}.spot .body{display:block}.spot:not([open]) .body{display:block}body{background:#fff}}
+</style>
+</head>
+<body>
+
+<nav class="topnav" aria-label="页面导航">
+  <a href="#plan">落地安排</a><a href="#radar">抢票日历</a><a href="#spots">全部景点</a><a href="#choices">顺路取舍</a><a href="#sources">来源</a>
+  <button class="primary" id="downloadIcs">下载提醒日历</button>
+</nav>
+<main>
+<section class="hero-grid" aria-label="核心指标">
+  <div class="metric"><small>全程</small><b>≈ 4,002 km</b><span>高德高速优先实算</span></div>
+  <div class="metric"><small>本页景点库</small><b>31 组</b><span>必看 / 顺路 / 免费</span></div>
+  <div class="metric"><small>两人核心门票</small><b>≈ ¥1,750–2,250</b><span>不含讲解、停车</span></div>
+  <div class="metric"><small>信息核验日</small><b>2026-09-15</b><span>国庆专门公告仍会更新</span></div>
+</section>
+
+<section id="plan">
+  <h2>这些景点怎么落到现有 8 天线路</h2>
+  <div class="alert"><b>广胜寺已纳入主线。</b>10月1日从许昌先到盐湖，再北上广胜寺、住临汾；10月2日从临汾去壶口、小西天、灵石。平遥古城仍不重复，双林寺、镇国寺从灵石继续北上顺路参观。</div>
+  <div class="route-grid">
+    <article class="day"><b>9/30 · 775 km</b><small>苏州 → 许昌</small><ul><li>高德纯驾驶7小时57分</li><li>00:00后驶离高速</li><li>酒店订9/30并报备晚到</li></ul></article>
+    <article class="day"><b>10/1 · 618 km</b><small>许昌 → 运城盐湖 → 广胜寺 → 临汾</small><ul><li>盐湖快看</li><li>广胜寺上寺必看</li><li>高德纯驾驶7小时52分</li></ul></article>
+    <article class="day"><b>10/2 · 399 km</b><small>临汾 → 壶口 → 小西天 → 灵石</small><ul><li>山西侧壶口</li><li>小西天悬塑</li><li>高德纯驾驶5小时47分</li></ul></article>
+    <article class="day"><b>10/3 · 449 km</b><small>灵石 → 王家大院 → 双林寺 → 镇国寺 → 忻州 → 雁门关 → 广武长城 → 应县</small><ul><li>古建核心速览</li><li>长城外观打卡</li><li>住应县保木塔开门场</li></ul></article>
+    <article class="day"><b>10/4 · 114 km</b><small>木塔 → 净土寺 → 云冈 → 华严寺 → 九龙壁 → 鼓楼 → 东南邑 → 善化寺</small><ul><li>大同完整古建日</li><li>市内短途＋步行</li><li>住大同</li></ul></article>
+    <article class="day"><b>10/5 · 288 km</b><small>大同 → 狼窝山 → 悬空寺 → 五台山</small><ul><li>高德纯驾驶6小时04分</li><li>悬空寺上午场</li><li>17:00前后到五台山</li></ul></article>
+    <article class="day"><b>10/6 · 620 km</b><small>五台山 → 佛光寺 → 南禅寺 → 济南</small><ul><li>台怀核心组合</li><li>唐构双寺</li><li>12:35开始南返</li></ul></article>
+    <article class="day"><b>10/7 · 739 km</b><small>济南 → 苏州</small><ul><li>06:20出发</li><li>不排景点</li><li>22:00到家硬截止</li></ul></article>
+  </div>
+</section>
+
+<section id="radar">
+  <h2>抢票和复核时间</h2>
+  <div class="panel timeline" id="timeline"></div>
+  <p class="muted download-note">“提前 7 日”常见含义是当日能买到含当天在内的未来 7 个自然日，因此网页同时安排前一日预提醒。最终以小程序当时显示的可售日期为准。</p>
+</section>
+
+<section id="spots">
+  <h2>全部景点攻略</h2>
+  <div class="toolbar">
+    <input id="search" type="search" placeholder="搜索景点、看点或攻略…" aria-label="搜索景点">
+    <select id="dayFilter" aria-label="按日期筛选"><option value="all">全部日期</option><option>10/1</option><option>10/2</option><option>10/3</option><option>10/4</option><option>10/5</option><option>10/6</option></select>
+    <select id="tierFilter" aria-label="按优先级筛选"><option value="all">全部优先级</option><option value="must">必看</option><option value="route">顺路加分</option><option value="free">免费快看</option></select>
+  </div>
+  <div class="card-grid" id="spotGrid"></div>
+</section>
+
+<section id="choices">
+  <h2>新增景点的取舍结论</h2>
+  <div class="panel">
+    <div class="decision"><b>广胜寺正式加入</b><span>10月1日盐湖后北上洪洞，15:20左右进园；上寺飞虹塔必看，下寺与水神庙按末入园取舍，晚上住临汾。</span></div>
+    <div class="decision"><b>王家大院、双林寺、镇国寺连续北上</b><span>10月3日从灵石依次向北走，不进入平遥古城。两寺核心殿宇修缮围挡以现场为准。</span></div>
+    <div class="decision"><b>应县开门场解决北线时段</b><span>10月3日沿王家大院、双林寺、镇国寺、忻州、雁门关连续北上，住应县；10月4日木塔开门场后看云冈、华严寺，再到乌兰哈达与乌兰察布。</span></div>
+    <div class="decision"><b>两组火山都保留</b><span>主方案取消乌兰哈达与乌兰察布，10月4日完整游览大同古建；10月5日从大同经火山群、悬空寺到五台山，高德纯驾驶6小时04分。</span></div>
+    <div class="decision"><b>五台山与唐构双寺</b><span>10月6日上午只看五爷庙、塔院寺、显通寺核心组合；随后佛光寺、南禅寺，12:35起直奔济南。高德纯驾驶8小时41分。</span></div>
+    <div class="decision"><b>盐湖与关帝庙二选一</b><span>盐湖按你的要求保留；若天气、光线或水位欠佳，用解州关帝庙替换。两个都进会挤掉广胜寺完整参观时间。</span></div>
+    <div class="decision"><b>明确不去</b><span>太原市区、晋祠、山西博物院和平遥古城不重复；呼和浩特市区和鄂尔多斯不再扩线，乌兰察布以乌兰哈达火山完成。</span></div>
+  </div>
+</section>
+
+<section id="sources">
+  <h2>核验来源与边界</h2>
+  <div class="panel">
+    <p><span class="pill verified">已核验</span>表示找到 2026 年官方或政府转发规则；<span class="pill pattern">季节规律</span>表示 10 月专门公告尚未发布；<span class="pill pending">出发前复核</span>表示票费、开放范围或放票时刻没有可靠的 2026 国庆定论。</p>
+    <ul class="source-list" id="sourceList"></ul>
+    <p class="muted">你提供的截图还用于补充住宿区域、讲解价值、凤临阁等用餐线索，但社媒截图不承担开放时间与票价的最终核验。页面里的高德按钮只负责地点搜索，进入景区前请再选择准确停车场/游客中心入口。</p>
+  </div>
+</section>
+</main>
+<script>
+const S={
+ salt:['运城盐湖介绍与开放口径（运城市政府）','https://www.yuncheng.gov.cn/doc/2020/07/21/71095.shtml'],
+ guandi:['关公故里景区信息（运城市政府）','https://www.yuncheng.gov.cn/zjyc_1/index.shtml'],
+ gss:['广胜寺现行开放信息（携程，2026-09-13抓取）','https://you.ctrip.com/sight/hongtong3015/11391.html'],
+ hukou:['晋陕壶口一票通与现价（央广网/山西日报，2026-06-05）','https://www.cnr.cn/sx/gstjsx/20260605/t20260605_527648342.shtml'],
+ hukouHours:['山西壶口9月运营调整（山西新闻网转景区公告，2026-09-02）','https://www.sohu.com/a/1071109751_121475662'],
+ datongSep:['九龙壁9–10月旺季开放（景区公告转载，2026-08-29）','https://www.sohu.com/a/1071109751_121475662'],
+ xxt:['小西天实名预约规则（人民日报客户端转载，2026-03-26）','https://sdxw.iqilu.com/share/YS0yMS0xNzEwODA5Mg%3D%3D.html'],
+ xxtHours:['小西天季节开放时间（携程，2026-09-13抓取）','https://you.ctrip.com/sight/xicounty1446128/11407.html'],
+ pingyaoTickets:['双林寺、镇国寺票价与官方购票渠道（景区公告转载，2026-03-06）','https://www.15386.cn/post/135947.html'],
+ pingyaoRepair:['双林寺千佛殿、镇国寺万佛殿半封闭修缮提示（2026-07）','https://jingdian.juyoufuli.com/app/scenics/54701'],
+ wang:['王家大院现行开放信息（携程，2026-09-15抓取）','https://you.ctrip.com/sight/lingshi3011/74745.html'],
+ wts:['五台山游客服务中心公告页','https://www.wtsykfwzx.com/tzzn.aspx?category_id=0'],
+ wtsRule:['五台山车辆和门票提前一天00:00答复','https://www.wtsykfwzx.com/feedback.aspx?page=8'],
+ tayuan:['塔院寺季节开放信息（携程，2026-09-13抓取）','https://you.ctrip.com/sight/wutaicounty1446115/7901.html'],
+ ymg:['雁门关10月季节开放与现售票（去哪儿，2026-09-14抓取）','https://piao.qunar.com/ticket/detail_12965.html'],
+ wood:['应县木塔服务信息（第三方票务，出发前复核）','https://www.younichuang.com/phone/spots/show_240.html'],
+ hang:['悬空寺2026登临票官方须知','https://www.byhs.net.cn/culture_detial/204.html'],
+ shanhua:['善化寺恢复收费官方公告','https://ai.dt.gov.cn/dtszf/bumdtku/202507/dd38df65c6c84322a2355a1e7de26452.shtml'],
+ datong:['大同古城现状与重点古建（大同市政府，2026-08）','https://www.dt.gov.cn/dtszf/bumdtq/202608/7433d29bed1b4ca8b431c567ebb110fa.shtml'],
+ volcano:['大同火山群免费铛铛车官方班次','https://www.yunzhou.gov.cn/yzqrmzfz/ggjt/202604/53239ef206d84ce7a0b4018201d0041f.shtml'],
+ ulan:['乌兰哈达火山草原线路（文化和旅游部）','https://zhuanti.mct.gov.cn/xcszbwg2022/neimenggu/detail/1954.html'],
+ tang:['五台县佛光寺、南禅寺文旅信息入口','https://wtwly.chaoxing.com/'],
+ yungang:['云冈预约周期官方公告','https://www.dt.gov.cn/dt12345/rxdt1/202604/29b73c0aa08148e3baca536eb7166bb9.shtml'],
+ yungangHours:['云冈9月开放与公益讲解（大同市政府，2026-09-04）','https://www.dt.gov.cn/dt12345/rxdt1/202609/1f041480a1454dfe836b2cff9afad44b.shtml'],
+ datongHours:['大同文物景点节假日延时先例（仅作参考）','https://www.dt.gov.cn/dtszf/bmdt/202605/0a3cbc3f82cb4b17aa4dd1f2a688f487.shtml']
+};
+const spots=[
+{n:'运城盐湖',d:'10/1',tier:'must',kind:'盐业文明·自然景观',status:'pending',time:'政府页面旧口径为09:00–22:00；本次只看外围/观景点，国庆开放以景区公告为准',fee:'外围与部分公共观景点可免费；核心体验项目、停车另计',book:'快速观景通常无需抢票；如进付费项目，T-7查“运城盐湖中国死海”',intro:'运城盐湖面积约132平方公里，是典型硫酸钠型内陆盐湖，也是理解河东地区盐业、交通和国家财政史的入口。彩色水面受藻类、卤水浓度、温度与光线共同影响，不能保证每天都呈现航拍图中的颜色。',look:'把车停在正规开放点，先看盐池格网、中条山背景和盐业遗迹；本次不做漂浮、黑泥等长时项目。',route:'10/1 12:00–13:00，随后沿高速北上广胜寺。',tips:'中午光硬但节省时间；若当天阴雨、水色普通或园区拥堵，直接换解州关帝庙。',late:'12:30仍未进入观景区：只看外围20分钟；13:00必须北上。',weather:'阴雨或低能见度会显著降低观景价值，古建替换更稳。',src:'salt'},
+{n:'解州关帝庙',d:'10/1',tier:'route',kind:'关帝信仰·明清古建',status:'pending',time:'旺季常见08:00–18:00；10/1末入园以官方购票页为准',fee:'常见全价约¥60/人，国庆现价复核',book:'节日建议提前购可退票；未找到固定抢票日',intro:'解州是关羽故里，关帝庙以宫殿式轴线表达关帝由历史人物到国家祭祀神祇的身份变化。端门、雉门、午门、崇宁殿与春秋楼形成层层递进的礼制空间。',look:'时间只有90分钟时沿中轴走：端门—午门—崇宁殿—春秋楼；留意牌坊、琉璃、木雕和建筑等级。',route:'只作为盐湖的天气替换项，不能与盐湖同时叠加；看完仍按13:00左右北上洪洞。',tips:'适合请讲解，重点听宋元以后关帝敕封、商帮信仰与空间礼制，不必在附属商业街停留。',late:'11:50以后才到运城：盐湖与关帝庙二选一，12:50离园。',weather:'雨天比盐湖稳定，殿院间仍需雨具。',src:'guandi'},
+{n:'广胜寺',d:'10/1',tier:'must',kind:'古建·琉璃·壁画',status:'pattern',time:'夏令 08:00–18:30，冬令至17:30；10/1按国庆公告复核',fee:'约¥55–70/人，含上寺、下寺、水神庙的口径以购买页为准',book:'未找到硬性提前天数；节日建议 T-7 购可退票',intro:'一处看完明代飞虹琉璃塔、元明木构和水神庙元代戏曲壁画。曾藏《赵城金藏》，国宝密度很高。',look:'上寺先看飞虹塔与弥陀殿；若入园已晚，下寺和水神庙只保一个。',route:'15:30–17:15。游客中心、上寺与下寺分开，接驳和步行都会吃时间。',tips:'最值得请讲解的一站之一；飞虹塔看琉璃细部，水神庙重点听戏曲与市井壁画。',late:'15:30仍未到：只看上寺；16:20后才进：按末入园直接取消。',weather:'雨天仍可看殿内，飞虹塔外观拍照效果下降。',src:'gss'},
+{n:'山西黄河壶口瀑布',d:'10/2',tier:'must',kind:'自然·黄河',status:'verified',time:'9月现行为07:30开园、18:00停检；10/2专门公告待发',fee:'¥80/人；山西侧观光车往返¥16/人',book:'可现场/线上实名购票；节日建议提前买，身份证＋二维码',intro:'黄河在晋陕峡谷收束跌入龙槽，核心体验是水势、轰鸣和水雾。2026年起一张票两日内可分别进晋陕两侧一次。',look:'本路线只看山西侧，不为了“一票两岸”跨桥再花半天。先走主观瀑平台，再按现场开放看近水区域。',route:'09:00–11:00。穿防滑鞋，手机和镜头防水；返停车场要算景交时间。',tips:'上午行程是为了给小西天留出下午容量票和关门缓冲。黄河水情可能临时封闭近水点。',late:'10:15仍未到观瀑区：压缩到60分钟；11:00必须离开。',weather:'暴雨、上游来水会影响开放；T-7和前一晚都查官方。',src:'hukou'},
+{n:'隰县小西天',d:'10/2',tier:'must',kind:'悬塑·明代古建',status:'verified',time:'10月至次年4月 08:00–17:30；16:00停售、17:00停入',fee:'约¥35/人，购买页为准',book:'提前7天实名预约；官方公众号/携程/美团/抖音，现场当日票有限',intro:'凤凰山上的明代寺院，核心是大雄宝殿近两千尊悬塑形成的层叠佛国。空间小、节日容量压力大。',look:'先下院无量殿，再直上大雄宝殿；把观察时间留给梁架、天宫楼阁与悬塑层次。',route:'计划13:10–15:20。上山台阶和入口排队都需预留，不把16:00当“还能慢慢买票”。',tips:'殿内光线暗，先听讲解再细看；服从限时分批，禁止闪光灯的区域不要拍。',late:'14:30仍未入园：压缩参观并确保15:20离开，随后直接赴灵石；16:00未入园则不要赌。',weather:'雨天可参观，但台阶湿滑；大殿限流会放大排队。',src:'xxt'},
+{n:'王家大院',d:'10/3',tier:'must',kind:'清代民居·晋商文化',status:'pattern',time:'4月1日–10月31日现行08:00–19:30，18:30停入；国庆公告覆盖',fee:'常见全价约¥55/人，购买页为准',book:'节日建议提前买可退票；无固定抢票日',intro:'灵石静升王氏经明清数百年营建的堡院群，现开放的高家崖与红门堡把宗法秩序、官宦生活和防御性空间合在一起。砖、石、木“三雕”不是装饰堆砌，而是家族伦理与身份的图像化表达。',look:'高家崖看院落等级与生活功能，过桥到红门堡看“王”字街巷和三雕；登高点看堡院与黄土台地关系。',route:'10/3 07:30–09:30，从灵石酒店几公里到景区，结束后向北去双林寺。',tips:'两小时只走高家崖—红门堡主线，不进每个展室；讲解可在入口询问拼团。',late:'08:00以后才入园：压缩到90分钟，09:30必须离开。',weather:'雨天院落石阶湿滑，但室内展陈仍可看。',src:'wang'},
+{n:'双林寺',d:'10/3',tier:'must',kind:'明代彩塑·世界遗产',status:'verified',time:'现行季节时段约08:00–17:30；国庆专门公告待发',fee:'全价约¥35/人',book:'“平遥古城景区官方服务平台”实名购票；门票当日有效',intro:'寺院旧称中都寺，现存十座殿宇多为明清建筑，以两千余尊彩塑形成完整的佛教造像体系，是理解明代民间塑造技艺的重要现场。',look:'从天王殿进入后，以释迦殿、菩萨殿、罗汉殿为主线；观察人物姿态、衣纹、群像叙事和护法神的夸张动态。',route:'10/3 10:40–11:50，王家大院后继续向北。',tips:'千佛殿自2026年7月至2028年9月半封闭修缮，现场可见范围以围挡为准；不要因核心殿受限而跳过其他殿宇。',late:'11:10仍未入园：压缩至45分钟，12:00必须离开。',weather:'室内为主，雨天可行；停车与排队需留15分钟。',src:'pingyaoRepair'},
+{n:'镇国寺',d:'10/3',tier:'must',kind:'五代木构·世界遗产',status:'verified',time:'现行季节时段约08:00–17:30；国庆专门公告待发',fee:'全价约¥25/人',book:'“平遥古城景区官方服务平台”实名购票；门票当日有效',intro:'始建于五代北汉时期，万佛殿是极少见的五代木构遗存。前后两进院落保存从五代到明清的建筑与彩塑，是观察早期木构比例的关键地点。',look:'先看山门与钟鼓楼形成的院落，再比较万佛殿低缓屋顶、硕大斗拱和短柱网；后院三佛楼用来理解寺院后期扩建。',route:'10/3 12:15–13:15，结束后直接北上忻州。',tips:'万佛殿自2026年7月至2027年9月半封闭修缮，最重要木构可能只能受限观看；出发前电话确认围挡范围。',late:'12:45才到：只看建筑主轴，13:20硬离开。',weather:'院落短步行为主；雨天注意古建台基湿滑。',src:'pingyaoRepair'},
+{n:'五台山景区入山与接驳',d:'10/6',tier:'must',kind:'交通·预约',status:'verified',time:'寺院各自开放；本次只用台怀核心区06:30–09:15',fee:'景区门票约¥135/人，景交/寺院小门票另计，购买页复核',book:'现行答复：游客与车辆提前一天00:00预约；国庆如有专门规则以公告覆盖',intro:'这张“景点卡”管的是能否进山与如何停车。自驾车预约失败时，按游客中心停车＋景区公交执行。',look:'不安排五座台顶，也不走非游览线路；只做台怀镇核心寺院簇。',route:'10/5晚住台怀镇，10/6清晨直接步行或短接驳进入核心区。',tips:'10/5 00:00抢10/6游客与车辆名额；车辆失败不等于行程失败，立即切接驳方案。',late:'09:15仍未离开核心区：佛光寺、南禅寺二选一，优先佛光寺。',weather:'高海拔早晚冷；大风雨减少台阶和长距离步行。',src:'wtsRule'},
+{n:'显通寺',d:'10/6',tier:'must',kind:'五台山·古建',status:'pending',time:'常见日间开放，国庆以寺院现场和官方公告为准',fee:'寺院小门票以现场/官方购买页为准',book:'景区入山需预约；寺院是否单独购票现场确认',intro:'五台山规模大、历史早的汉传寺院，铜殿、无量殿和钟楼是建筑重点。',look:'时间紧就走中轴：山门—大雄宝殿—无量殿—铜殿，避免在偏院耗时。',route:'建议60–75分钟，与塔院寺相邻，步行串联。',tips:'图中“东方铜雕艺术宝库”对应铜殿；请讲解比只拍外观更值。',late:'剩余不足90分钟：显通寺和塔院寺只保一个，优先显通寺深看。',weather:'雨天可参观殿内，石阶注意防滑。',src:'wts'},
+{n:'塔院寺',d:'10/6',tier:'must',kind:'五台山·白塔',status:'pattern',time:'5月1日–10月31日 07:30–17:00',fee:'寺院小门票以官方/现场为准',book:'随五台山入山预约；未找到单独硬性抢票期',intro:'以大白塔为中心，是五台山最清晰的地标。大白塔、木牌坊与藏经阁组成主要看点。',look:'沿中轴快速看大白塔与木牌坊，30–40分钟够做一次有重点的参观。',route:'与显通寺、五爷庙同片区，最适合顺路串联。',tips:'不必绕塔多圈挤人流；尊重宗教场所秩序。',late:'15:20后才到：只看白塔核心，不再加罗睺寺。',weather:'风雨天外观体验下降，但不影响核心串联。',src:'tayuan'},
+{n:'五爷庙（万佛阁）',d:'10/6',tier:'route',kind:'五台山·香火',status:'pending',time:'开放随寺院和景区管控，国庆复核',fee:'通常不另收大额门票；以现场为准',book:'入山预约是前提；不把排队当成必须完成',intro:'五台山香火最旺的寺院之一，节日队伍可能远超实际参观时间。',look:'以建筑和现场氛围为主，不购买来路不明的香品。',route:'只给20–30分钟；队伍超过30分钟就外观后走。',tips:'参考图强调“请讲解”，这里反而不宜为仪式和排队占掉古建时间。',late:'无条件先削减；不影响显通寺、塔院寺。',weather:'人流比天气更影响体验。',src:'wts'},
+{n:'罗睺寺',d:'10/6',tier:'route',kind:'五台山·顺路古建',status:'pending',time:'以当日寺院开放为准',fee:'以现场为准',book:'无单独抢票信息；入山预约是前提',intro:'五台山核心寺院之一，与显通寺、塔院寺近，适合作为参考图之外的顺路补充。',look:'有余量才看中轴与殿内造像，不把它排在两大核心前。',route:'增加30–40分钟，不增加驾车绕行。',tips:'只有15:00前完成塔院寺且体力正常才进入。',late:'直接取消。',weather:'雨天可作为短室内补充。',src:'wts'},
+{n:'忻州古城',d:'10/3',tier:'free',kind:'古城·夜游',status:'pending',time:'开放街区可晚间步行；展馆/演出各自营业',fee:'街区免费，演出和个别项目另付',book:'街区无需抢票；演出若看需单独核实',intro:'把五台山返程后的晚餐和散步合并，重点是南北大街、泰山庙巷与城门街景。',look:'不为“又见平遥”演出改变路线；你已去过平遥，古城只做轻量夜游。',route:'19:00–20:00，酒店入住和充电优先。',tips:'在人多餐饮街就近吃，不为网红店再排一小时。',late:'20:00后到忻州：直接入住，古城取消。',weather:'雨天只吃饭，不做长步行。',src:'wts'},
+{n:'雁门关',d:'10/3',tier:'must',kind:'关隘·长城',status:'pattern',time:'10月季节口径 08:00–17:30；国庆公告待核',fee:'现售成人票约¥85/人',book:'节日建议提前买可退票；未找到固定放票日',intro:'古代北方重要关隘，核心是关城、古关道与边塞地形。深度长城步道需要半天，本次只走关城主线。',look:'从适合停车的一侧进入，优先关楼、地利门/天险门与近段古道。',route:'08:15–10:15，预留景交和爬坡；不走长距离白草口线。',tips:'风大体感温度低；穿防风外层。讲解能把杨家将叙事与真实关防结构分开。',late:'09:00后才进：压缩到90分钟；10:15必须离开。',weather:'大风、降雨或能见度低时可缩短；若取消，可把时间给应县/浑源古建。',src:'ymg'},
+{n:'应县木塔',d:'10/4',tier:'must',kind:'辽代木构',status:'pending',time:'旺季常见08:00–18:00；10/4按景区公告',fee:'约¥50/人',book:'节日建议提前3天开始检查；未找到权威固定放票时刻',intro:'佛宫寺释迦塔建于辽代，是现存体量最大、年代最早的木结构楼阁式塔之一。外观五层六檐，内部为明五暗四。',look:'先退远看整体比例，再近看斗拱、匾额和首层佛像；目前不安排登塔。',route:'12:00–13:15。停车、安检、排队会压缩净参观时间。',tips:'核心是结构和54种斗拱，不要只在正面拍照。旁边数字体验馆只在木塔参观顺畅时考虑。',late:'12:50仍未结束：不加净土寺，直接去悬空寺。',weather:'雨天可看，但广场风大。',src:'wood'},
+{n:'应县净土寺',d:'10/4',tier:'must',kind:'金代古建·藻井',status:'pending',time:'开放和修缮状态需出发前电话/现场核实',fee:'以现场为准',book:'无可靠固定预约规则',intro:'距木塔不远，以金代大雄宝殿与“天宫楼阁”式藻井见长，是非常对口的古建加分项。',look:'只在木塔排队短、悬空寺票时段允许时停20–30分钟。',route:'10/4 08:55–09:35，与木塔相距约1公里，正式并入主线。',tips:'把它理解成“赢得的奖励”，不要写成必到。',late:'12:30后离开木塔：取消。',weather:'雨天比室外点稳定，但不能替代登临票时段。',src:'wood'},
+{n:'悬空寺',d:'10/5',tier:'must',kind:'摩崖木构·限量登临',status:'verified',time:'10月常见08:00–17:00；国庆专门时段待公告',fee:'入园约¥15＋登临约¥100/人，购买页确认',book:'“北岳云游”每日07:20可订7日内；线上1200张/日，登临需同时买入园票',intro:'贴崖悬挑的木构建筑，真正稀缺的是登临容量，不是外围入园票。2026年每日登临总量控制在2475张。',look:'先在谷底看整体结构，再按时段排队登临；通道窄，不能逆行久停。',route:'目标10/5 10:55–12:30，必须抢与抵达相匹配的上午票。',tips:'线上只认“北岳云游”等官方授权渠道；不要买黄牛承诺。两人都用实名证件。',late:'错过登临时段：只看外围，转浑源永安寺/圆觉寺或提早到大同。',weather:'高风、降雨可能影响登临；外围仍可视开放参观。',src:'hang'},
+{n:'浑源永安禅寺＋圆觉寺塔',d:'10/5',tier:'route',kind:'壁画·古塔替换项',status:'pending',time:'开放与修缮需 T-7 核实；圆觉寺塔外围可快看',fee:'永安寺内部票务以现场为准；外围外观免费',book:'无可靠固定抢票期',intro:'永安禅寺以元明壁画见长，圆觉寺砖塔是浑源古城醒目标志。都对古建兴趣很友好，但不可能在原计划里“顺手全看”。',look:'悬空寺未登临时，优先永安禅寺深看；只有15分钟就看圆觉寺塔外围。',route:'从悬空寺进浑源县城会增加停车和30–45分钟机动。',tips:'不要在有下午登临票时临时绕城。',late:'17:00后只看外观或取消。',weather:'可作为悬空寺因风雨停登后的室内替换。',src:'datong'},
+{n:'华严寺',d:'10/5',tier:'must',kind:'辽金古建·彩塑',status:'pattern',time:'常规约08:30–17:00；国庆是否延时待公告',fee:'旺季¥50/人',book:'“大同华严寺景区”官方渠道/古都大同；节日建议提前',intro:'大同古城西南角的辽金寺院，薄伽教藏殿、辽代彩塑和金代大雄宝殿是主角。',look:'先薄伽教藏殿再大雄宝殿；华严宝塔只有排队短才登。',route:'10/4 14:25–15:50，云冈后进入古城，随后步行串联九龙壁等市内点。',tips:'参考图的“北魏京华、辽金陪都”脉络可以从这里开始。建议租讲解器或蹭固定讲解。',late:'09:00才入园：仍保90分钟；宝塔先删。',weather:'非常适合雨天，但节日殿内会拥挤。',src:'datongHours'},
+{n:'九龙壁',d:'10/4',tier:'route',kind:'明代琉璃',status:'verified',time:'9月1日–10月31日 08:30–18:00，节假日以上级通知为准',fee:'当前官方页面未给常规票价；在“古都大同”购买页确认',book:'可通过“古都大同”或官方渠道；无需为它牺牲华严寺',intro:'原代王府前的明代琉璃照壁，体量大、九条龙姿态各异。单体景点，适合30分钟快看。',look:'先退到水池另一侧看整体，再近看龙身与琉璃釉色。',route:'10/4 15:55–16:20，华严寺后步行/短途移动，正式并入主线。',tips:'参考图写“免费”不可靠；2026年仍有“兑换门票”官方指引，说明需以当日票务页为准。',late:'若华严寺排队超时，九龙壁只看15分钟。',weather:'小雨可看，强光更利于琉璃色彩。',src:'datongSep'},
+{n:'鼓楼＋关帝庙',d:'10/4',tier:'free',kind:'古城快看',status:'pending',time:'外观全天可看；内部节假日开放待公告',fee:'街区/外观免费，内部票务以“古都大同”为准',book:'只有进内部才需查票',intro:'鼓楼是古城十字轴心，关帝庙保留元代大殿。两点相距近，适合在古城步行中串联。',look:'白天时间紧就只看外观；若国庆延时开放，可晚上补内部，但不提前承诺。',route:'九龙壁到善化寺之间或晚间回城后完成。',tips:'餐饮可放鼓楼东西街；参考图里的凤临阁可列候选，但国庆排队长则就近换店。',late:'全部可晚间补外观。',weather:'雨天缩成15分钟街景。',src:'datong'},
+{n:'善化寺',d:'10/4',tier:'must',kind:'辽金古建·彩塑',status:'verified',time:'常规日间开放；国庆具体闭园时刻待官方通知',fee:'旺季全价¥50/人、半价¥25/人',book:'官方公众号/古都大同；节日建议提前',intro:'保存完整、规模大的辽金寺院，山门、三圣殿和大雄宝殿沿中轴展开，金代彩塑很值得细看。',look:'山门本身就是重点；入内后看三圣殿斗拱、大雄宝殿彩塑与壁画。',route:'10/4 17:00–18:10，山门、三圣殿、大雄宝殿走主线，正式并入。',tips:'2025年已恢复收费，旧攻略写“永久免票”已过期。',late:'只剩45分钟：山门＋三圣殿＋大雄宝殿主线。',weather:'雨天稳定，适合作为火山取消后的深度点。',src:'shanhua'},
+{n:'大同火山群·狼窝山',d:'10/5',tier:'must',kind:'火山地貌·秋景',status:'pending',time:'官方旅游指南曾列08:00–18:30、17:00停入；2026国庆需复核',fee:'2026现行门票/开放步道未找到可靠定论',book:'未找到固定预约期；T-7查“今日云州/云州区政府”',intro:'大同盆地保存多座火山锥，狼窝山是目前旅游动线最明确的一处，能看到火山口与台地秋色。',look:'只走开放步道和观景台，不翻越围栏，不把未经开发的锥体当路线。',route:'10/5 07:40–08:35，从大同出发先看狼窝山，随后去浑源；免费铛铛车班次不适合本日。',tips:'免费铛铛车已核实为每日4班往返；这不等于门票免费。自驾停车入口出发前在高德核准。',late:'14:30仍未离开大同古城：取消火山，改法华寺/古城墙。',weather:'大风、降雨或低能见度直接取消，换古城室内。',src:'volcano'},
+{n:'东南邑历史街区',d:'10/5',tier:'free',kind:'街区·夜游',status:'verified',time:'开放街区可晚间步行；店铺展览各自营业',fee:'街区免费',book:'无需预约',intro:'在传统街巷与院落中加入非遗、展厅和餐饮，是大同古城夜间最好消化的一段。',look:'回城后走30–45分钟，和晚餐合并。',route:'10/4云冈离园后住大同，晚餐时快走20–45分钟。',tips:'这里适合拍照和休息，不用把每家店都打卡。',late:'晚到仍可保留20分钟。',weather:'雨天转室内店铺或取消。',src:'datong'},
+{n:'大同古城墙·永泰门',d:'10/5',tier:'free',kind:'城防·夜景',status:'pattern',time:'国庆通常夜间开放，2026具体区域和花灯票务需公告',fee:'外围外观免费；白天/夜间开放区域和活动票可能不同',book:'如有夜间活动票，T-7再决定；不提前买不明套餐',intro:'复建城墙延续明代方城格局，永泰门适合看古城中轴和夜景。',look:'优先外围和免费开放段；登城只在回城早、天气好时进行。',route:'10/4晚间与鼓楼、东南邑择近完成20–40分钟。',tips:'降雨、降雪或大风可能关城墙；不要把22:00类往年延时当今年承诺。',late:'20:30后只看永泰门外围。',weather:'雨天不登城。',src:'datongHours'},
+{n:'法华寺＋鼓楼东西街',d:'10/5',tier:'route',kind:'古塔·雨备',status:'pending',time:'以“古都大同”当日开放为准',fee:'街区免费；法华寺内部票务待查',book:'只作雨备，不需要提前锁死',intro:'法华寺塔和院落可补大同古城的古塔线；鼓楼东西街负责餐饮和晚间步行。',look:'火山取消后，法华寺＋九龙壁＋城墙构成半日室内外替换。',route:'不与狼窝山同时强塞。',tips:'用户截图里的“大同古城漫游”在这里展开，但仍按开门状态取舍。',late:'有火山则只保街区。',weather:'雨天替换狼窝山。',src:'datong'},
+{n:'云冈石窟',d:'10/4',tier:'must',kind:'北魏石窟',status:'verified',time:'9月现行08:00–17:00；10/4国庆开放时段待官方公告',fee:'约¥120/人，购买页为准',book:'提前15日（不含当日）实名预约；所有游客含免票人群均需预约',intro:'北魏皇家石窟群，昙曜五窟到中期洞窟展示从雄健造像到汉化装饰的变化。',look:'先按时间轴看5–20窟，再回看重点：第5/6窟、昙曜五窟；附属馆只在11:00前有余量时进。',route:'10/4 10:30–13:15，应县木塔开门场后从南侧进入云冈。',tips:'可另约每日定时公益讲解，现行8:30/10:30/14:30各一场、约90分钟、每团20人；国庆是否照常需确认。',late:'15:00后入园：只走5—20窟核心线，附属馆取消；16:45离园。',weather:'雨天可参观，但洞窟间户外步行仍需雨具。',src:'yungang'},
+{n:'乌兰哈达火山',d:'专项',tier:'route',kind:'火山地貌·草原秋景',status:'pending',time:'开放区域通常全天可游；国庆单向交通、车辆通行和停止进入时间需T-7复核',fee:'自然景观本体可能免费；2026国庆车辆通行、接驳和停车费用以现场公告为准',book:'未找到固定预约期；出发前查察右后旗文旅及高德景区公告',intro:'乌兰哈达位于察哈尔右翼后旗，30余座火山分布在约400平方公里的火山草原上。常见编号火山展示不同侵蚀、采掘与修复状态，是本次唯一真正进入内蒙古草原地貌的一段。',look:'90分钟速通只保4、5、6号火山：选择开放观景点，不攀爬封闭锥体；先看完整火山锥，再看黑色火山渣与草原色带。',route:'主方案已取消；未来安排内蒙古火山草原专项线时再启用。',tips:'火山间距离大，不步行串全套；午餐和补能放在集宁/察右后旗走廊。不要捡走火山石。',late:'18:00仍未到园区：只看最近的开放观景点或外观，随后直接入住乌兰察布。',weather:'大风、低云和降雨会明显影响观景；能见度差时缩到30分钟。',src:'ulan'},
+{n:'佛光寺',d:'10/6',tier:'must',kind:'唐代木构·彩塑壁画题记',status:'pattern',time:'现行4月2日–10月31日周二至周日08:30–17:30，17:00停入；法定节假日周一照常开放',fee:'常见全价约¥40–50/人，国庆购买页为准',book:'可能实行预约/限流；T-7查五台县文旅公告和购票页',intro:'佛光寺东大殿重建于唐大中十一年（857），殿、塑、壁画、题记共同形成罕见的唐代完整现场。梁思成、林徽因1937年的调查使其重新进入现代建筑史视野。',look:'沿高台直达东大殿，先看低缓屋面、深远出檐与巨大的斗拱，再看佛坛唐塑、题记和壁画；文殊殿只在不排队时补看。',route:'10/6 10:30–11:20，台怀镇离开后第一座唐构。',tips:'停车位有限，节日把找车位计入时间；殿内拍摄服从现场规定，讲解比匆忙拍照更有价值。',late:'10:50仍未入园：只看东大殿主线；11:30必须离开。',weather:'雨天仍可看殿内，但山路和石阶需谨慎。',src:'tang'},
+{n:'南禅寺',d:'10/6',tier:'route',kind:'唐代木构·中国现存最早',status:'pending',time:'开放时段与临时闭馆需T-7电话/文旅公告确认',fee:'常见票价较低或现场购票；2026国庆以现场为准',book:'未找到稳定线上预约规则；先确认开放，不提前买不明讲解套餐',intro:'南禅寺大殿重建于唐建中三年（782），通常被视为中国现存最早的木结构建筑。三间方形小殿规模不大，却完整保存早期木构的简洁比例和唐代雕塑体系。',look:'先退到院中看单檐歇山顶与三间面阔，再近看简洁有力的斗拱、柱网和佛坛彩塑；不要用体量判断价值。',route:'10/6 12:00–12:35，佛光寺后顺路南下；12:35是南返济南硬节点。',tips:'村落道路和停车容量有限，尊重居民通行；五台山接驳晚点时先压缩台怀寺院组合。',late:'12:05仍未到：只看30分钟；12:35不能离开则直接取消。',weather:'室内价值高，雨天可看；山区道路天气差时取消。',src:'tang'},,
+{n:'广武长城',d:'10/3',tier:'route',kind:'明长城·边塞体系',status:'pattern',time:'开放式遗址，具体可达路段和停车以现场为准',fee:'外观通常免费；停车或配套项目另计',book:'无需固定抢票；T-3在高德核对广武明长城景区入口',intro:'广武明长城位于雁门关外，是内长城防御体系的重要段落。附近旧广武城、汉墓群与关隘共同说明这里并非孤立城墙，而是一套控制交通孔道的边防系统。',look:'本次只在开放道路附近看城墙随山势起伏、敌台与关口地形，不走白草口长线。',route:'10/3雁门关后约35.5公里，停留20分钟，再赴应县。',tips:'不要导航到同名汽车商户；使用“广武明长城”完整名称。',late:'16:50后仍未到：仅在安全停车点远观，天黑前离开。',weather:'大风、降雨或低能见度取消下车。',src:'added'},
+{n:'觉山寺塔',d:'10/5',tier:'route',kind:'辽代密檐塔·灵丘',status:'pending',time:'开放和修缮状态需T-7核实',fee:'以现场为准',book:'未找到稳定预约规则',intro:'觉山寺位于灵丘，寺内辽代砖塔是晋东北重要密檐塔实例。塔身仿木构细节与砖雕反映辽代佛塔营造传统。',look:'重点看塔身收分、密檐层次、仿木斗拱与砖雕，不为拍全景进入封闭区域。',route:'10/5悬空寺后机动加入；11:00前离开悬空寺且高德预计纯驾驶仍≤9小时才启用。',tips:'它不是“顺手五分钟”的点，需同时核对山路、停车和开放。',late:'悬空寺11:30后离开时直接取消。',weather:'雨雪或山区能见度差取消。',src:'added'},
+{n:'公主寺',d:'10/6',tier:'route',kind:'明代壁画·古建',status:'pending',time:'开放与预约需专题核实',fee:'以现场为准',book:'可能受文保开放限制，出发前电话确认',intro:'繁峙公主寺以明代壁画和寺院建筑著称，壁画题材、人物与界画细节构成其核心价值。',look:'若未来专项到访，优先把时间给壁画并配合讲解，避免只拍殿宇外观。',route:'10/6台怀核心区提前结束后机动加入；必须守住12:35南返济南节点。',tips:'不要把社交平台“开放”信息当作当日保证。',late:'本次不临时加塞。',weather:'室内为主，但道路天气影响可达性。',src:'added'},
+{n:'徐显秀墓',d:'10/3',tier:'route',kind:'北齐墓葬·壁画',status:'pending',time:'开放需预约与官方公告确认',fee:'以官方渠道为准',book:'墓葬类文保点可能限流，需提前确认',intro:'徐显秀墓是北齐高级贵族墓葬，壁画中的仪仗、宴饮、服饰与人物形象，是理解北朝贵族生活和多元文化交流的重要材料。',look:'重点看壁画空间布局、人物服饰与仪仗等级；参观价值高度依赖讲解。',route:'10/3太原外围机动队列，与天龙山石窟、不二寺三选一；主线提前≥2小时才启用。',tips:'不接受非官方带入或封闭区参观。',late:'本次不临时加塞。',weather:'室内文保点，开放规则比天气重要。',src:'added'},
+{n:'天龙山石窟',d:'10/3',tier:'route',kind:'石窟·北朝至唐',status:'pattern',time:'景区开放时段以国庆公告为准',fee:'门票与接驳以购买页为准',book:'节日建议提前检查实名购票',intro:'天龙山石窟始凿于东魏，北齐、隋唐持续营造，造像风格呈现由北朝清瘦向唐代丰润转变的过程。',look:'按时代比较洞窟，不只看单尊造像；同时理解近代流失与数字复原背景。',route:'10/3太原外围机动队列，与徐显秀墓、不二寺三选一；启用需预留约2小时。',tips:'盘山道路和景交需要半天，不能作为高速途中快打卡。',late:'本次不临时加塞。',weather:'大风雨减少露天石窟停留。',src:'added'},
+{n:'不二寺',d:'10/3',tier:'route',kind:'古壁画·古建',status:'pending',time:'开放与修缮需地方文旅核实',fee:'以现场为准',book:'文保点开放不稳定，先电话确认',intro:'不二寺以古代寺院遗存和壁画受到访古旅行者关注，价值在于地方性宗教艺术与建筑历史，而非大型景区体验。',look:'看壁画题材、残存建筑关系和修缮痕迹，服从文保拍摄规定。',route:'10/3太原外围机动队列，与徐显秀墓、天龙山石窟三选一；先确认开放。',tips:'未经确认不要专程驶入乡道。',late:'本次不临时加塞。',weather:'道路与开放状态共同决定是否可达。',src:'added'},
+{n:'稷神楼',d:'10/1',tier:'route',kind:'明代楼阁·农神祭祀',status:'pending',time:'开放以新绛当地公告为准',fee:'外围或街区可能免费，内部以现场为准',book:'通常无需抢票，先查开放',intro:'稷神楼与后稷祭祀传统相关，体现晋南以农耕神祇组织地方信仰和城镇空间的方式。楼阁形制及其与古城街巷的关系是主要看点。',look:'先从街巷看楼阁控制天际线，再近看木构层次与匾额。',route:'10/1盐湖提前结束后的机动加项；高德增加不超过45分钟才启用。',tips:'适合与新绛古城、绛州大堂另组半日线。',late:'本次不临时加塞。',weather:'外围可看，雨天减少步行。',src:'added'},
+{n:'广胜寺水神庙',d:'10/1',tier:'must',kind:'元代壁画·水神信仰',status:'pattern',time:'随广胜寺下寺开放，末入园以国庆公告为准',fee:'通常含在广胜寺联票/对应票种内，购买页确认',book:'与广胜寺同渠道，不单独抢票',intro:'水神庙供奉霍泉水神，元代壁画把祈雨、酬神、戏曲和世俗生活纳入宗教空间，其中戏曲图像是研究元代舞台与社会生活的重要资料。',look:'找戏台、人物队列、生活场景与水神祭祀的关系；不要只把它当“附带壁画”。',route:'10/1到广胜寺较早时正式看下寺；15:40后到则先保上寺飞虹塔。',tips:'壁画对光线和拍摄限制敏感，现场讲解很有价值。',late:'广胜寺到达晚时降为机动，不拖延临汾入住。',weather:'室内为主。',src:'added'},
+{n:'永固陵（方山永固陵）',d:'10/4',tier:'route',kind:'北魏皇家陵寝·遗址',status:'pending',time:'遗址开放与可达范围需官方核实',fee:'以现场为准',book:'无稳定线上预约信息',intro:'永固陵是北魏文明太后冯氏陵墓，位于大同方山一带。其高大封土、礼制建筑遗址与北魏平城政治史相关，是理解北魏皇家陵寝制度的重要地点。',look:'重点理解陵园选址、封土尺度与礼制轴线；现场可视遗存可能少于博物馆式景点。',route:'10/4云冈13:15前出园且开放明确时启用；启用后鼓楼、东南邑移至晚饭后。',tips:'只有10/4市内核心全部按时完成且开放明确时才考虑，不能与主线同时承诺。',late:'15:00后不再北上。',weather:'大风、低能见度不去。',src:'added'}
+];
+const heritage={
+'运城盐湖':['盐湖形成于封闭盆地的蒸发浓缩环境，持续数千年的池盐生产深刻影响河东聚落、道路与财政。2020年起工业生产退出核心湖区后，保护与文旅展示成为主线。','先看盐池人工堤埝如何把自然湖泊切分为生产单元，再看中条山、湖面与城市的空间关系；把“彩色”当作自然条件的偶发呈现。'],
+'解州关帝庙':['关羽由三国武将逐步被历代王朝加封为关帝，解州祖庙因此兼具故里祭祀、国家礼制和商帮信仰。现存格局以明清重修为主。','沿中轴识别端门、雉门、午门、崇宁殿、春秋楼的等级递进；看琉璃、木雕和牌匾如何共同塑造帝王级祭祀空间。'],
+'王家大院':['静升王氏自明清扩建的堡院群，宅院布局同时服务于家庭生活、宗法管理、防御和官宦礼制。高家崖、红门堡呈现两种不同的组织方式。','从门第高低、院落进数、家塾与祭祖空间判断使用者身份；三雕要寻找“福禄寿”“耕读传家”等图像如何表达家族秩序。'],
+'乌兰哈达火山':['乌兰哈达火山群属于晚第四纪火山活动遗迹，火山锥、熔岩和火山渣共同记录喷发过程。草原植被覆盖与过去采掘痕迹让不同锥体呈现明显差异。','先看锥体轮廓和火山口，再近看火山渣粒径与颜色；比较修复区域、裸露区域和草地之间的边界，理解自然过程与人为扰动。'],
+'佛光寺':['东大殿重建于唐大中十一年（857），木构、彩塑、壁画和题记互相印证。它在20世纪30年代的重新调查也成为中国建筑史研究的重要节点。','先从台地与屋面比例看唐构的舒展，再看柱网、斗拱和佛坛如何共同组织内部空间；寻找题记与塑像，理解建筑年代判断不是只靠风格。'],
+'南禅寺':['大殿重建于唐建中三年（782），是现存最早的木结构建筑之一。小尺度殿宇保存了早期木构直接、简洁的受力和空间关系。','站在院中先看三间方殿的整体比例，再看柱头斗拱、梁架与屋顶；进入后观察佛坛塑像与殿内尺度，不要因为体量小而匆忙离开。'],
+'广胜寺':['始建于东汉，现存格局以元明遗构为主。上寺飞虹塔是明代重建的琉璃塔，下寺与水神庙保存元代壁画，是宗教建筑与地方水神信仰并置的典型。','先看建筑年代和中轴关系，再看飞虹塔琉璃构件的层层收分；水神庙壁画要找生活场景、戏曲图像和不同人物身份，而不只是拍全景。'],
+'隰县小西天':['寺院创建于明崇祯年间，大雄宝殿利用木构梁架悬塑出佛国世界。悬塑不是零散塑像，而是建筑、彩绘、楼阁与人物共同构成的三维叙事。','先辨认主尊与两侧群像，再从下往上看天宫楼阁、飞天和密集人物；留意远近尺度变化如何制造深度，避免只用手机放大寻找单尊。'],
+'双林寺':['双林寺旧称中都寺，与平遥古城、镇国寺共同列入世界遗产。现存殿宇以明清为主，彩塑延续宋元传统并形成强烈的世俗人物观察。','重点看韦驮像的身体扭转、罗汉群像的表情差异、菩萨衣纹与冠饰；比较同一殿内主尊的稳定和护法、侍从的动态。'],
+'镇国寺':['镇国寺万佛殿建于五代北汉天会七年（963），是中国现存极少的五代木构。寺院后部明清建筑使人能在同一院落比较多个时代。','观察万佛殿屋顶低缓、出檐深远、斗拱尺度大于后世常见做法；再与三佛楼的梁架、门窗和空间尺度比较，理解早期木构的雄浑感。'],
+'显通寺':['五台山汉传佛教核心寺院之一，寺史可追溯至东汉，现存建筑跨明清多个时期。无量殿以砖券结构形成无梁空间，铜殿则反映明代皇家供养。','沿中轴辨认木构殿、砖券无量殿和铜殿三种材料体系；注意它们解决跨度、防火和象征性的方法不同。'],
+'塔院寺':['寺名来自院内大白塔。现塔为明代在元代尼泊尔匠师阿尼哥式样基础上重建，是汉藏佛教交流与五台山视觉秩序的核心地标。','先从远处看白塔如何控制台怀镇天际线，再近看覆钵、相轮和塔刹的垂直比例；木牌坊与殿宇负责把人的步行轴线引向塔。'],
+'雁门关':['雁门关控制晋北南北通道，历代关城不断迁建修复。今天看到的关城兼有军事地形、边塞交通与后世重建展示价值。','不要只看城楼；先看山口收束和道路方向，再看关门、城墙、烽燧如何形成防御层次，区分历史遗存、修复体和旅游展示。'],
+'应县木塔':['佛宫寺释迦塔建于辽清宁二年（1056），是现存最高最古老的木塔之一。五层外观中夹有暗层，复杂铺作共同分担荷载并抵抗侧向力。','退远看五层六檐的稳定比例，近看不同层斗拱变化；理解斗拱不是装饰，而是传力、挑檐和抗震体系。首层佛像与内槽空间也属于整体设计。'],
+'应县净土寺':['净土寺大雄宝殿为金代遗构，殿内天宫楼阁藻井把佛国宫殿缩入梁架之下，木作、彩绘与空间幻觉结合。','进入后先适应暗光，再仰看藻井从方形空间向中心收束；比较真实梁架与装饰性楼阁，分辨结构构件和象征世界。'],
+'悬空寺':['悬空寺依恒山峡谷崖壁营建，现存建筑多经明清修葺。横梁、立柱、岩体承托和建筑群彼此咬合，价值在于因地制宜的空间组织。','谷底先看整体与岩壁关系，登临后看狭窄廊道、错层和殿阁互借空间；不要把外露立柱简单理解成全部承重体系。'],
+'浑源永安禅寺＋圆觉寺塔':['永安禅寺以元明壁画闻名，圆觉寺塔则是金代密檐式砖塔。两处把浑源从“悬空寺中转站”还原为有连续宗教建筑史的县城。','永安寺先看壁画人物等级、服饰和仪仗秩序；圆觉寺塔从外围观察塔身收分、密檐节奏与塔刹，不追求贴近围栏。'],
+'华严寺':['华严寺源于辽代皇家寺院传统，薄伽教藏殿保存辽代木构、彩塑和藏经壁藏，大雄宝殿为金代大尺度佛殿。','先在薄伽教藏殿理解“建筑中的建筑”：壁藏与天宫楼阁围合佛殿；再到大雄宝殿比较辽金木构尺度、梁架和塑像布局。'],
+'九龙壁':['九龙壁原为明代代王府前照壁，琉璃构件兼具礼制、镇护与建筑界面作用。水池倒影强化了壁面横向展开。','先数九条龙的姿态和彼此穿插，再看釉色、海水江崖纹和须弥座；留意每条龙并非复制，而是用方向和动作维持整体节奏。'],
+'善化寺':['善化寺保存辽金时期山门、三圣殿和大雄宝殿，是少见的完整寺院轴线。金代彩塑与建筑空间共同构成礼佛秩序。','从山门开始看屋顶等级与中轴层层抬升；三圣殿重点看斗拱，大雄宝殿看彩塑群像如何与柱网、佛坛配合。'],
+'云冈石窟':['云冈开凿于北魏平城时代，早期昙曜五窟强调帝王化巨像，中期洞窟吸收中亚、印度与汉地建筑纹样，记录北魏国家佛教的变化。','按5—20窟大致时间线观察：先看巨像尺度和窟形，再比较第5、6窟密集叙事与装饰。关注造像衣纹、面相和建筑纹样的汉化过程。']
+};
+const radar=[
+['09/16','T-14 总复核','核对全部国庆专门公告、开放时段、末入园和票价；尤其是云冈、雁门关、壶口、大同古城。'],
+['09/19','云冈石窟 10/4','15日预约窗的关键日；官方小程序内确认具体放票时刻并购14:00前后场次。'],
+['09/25 晚','小西天预提醒','先登录“隰县小西天景区”并录好两人实名信息。'],
+['09/26','小西天 10/2','进入7日可售窗的预计关键日；放票时刻未找到可靠官方定论，上午开始查。'],
+['09/28 07:15','悬空寺预提醒','检查“北岳云游”实名信息、支付和末时段场次。'],
+['09/29 07:20','悬空寺 10/5','抢末时段入园票＋登临票；现行规则每日07:20可订7日内。'],
+['09/29','T-1 车辆与离线包','下载门票二维码、高德离线地图、KML；检查胎压、ETC、充电App和随车装备。'],
+['10/04 23:55','五台山预提醒','打开五台山游客服务中心，准备抢10/6游客和车辆预约。'],
+['10/05 00:00','五台山 10/6','按现行官方答复提前一天预约；如国庆另发专门规则，以新公告为准。']
+];
+function cls(s){return s==='verified'?'verified':s==='pattern'?'pattern':'pending'}
+function lab(s){return s==='verified'?'2026规则已核验':s==='pattern'?'季节规律·待国庆公告':'出发前复核'}
+function tier(t){return t==='must'?'必看':t==='route'?'顺路加分':'免费快看'}
+function amap(n){return 'https://uri.amap.com/search?keyword='+encodeURIComponent(n)+'&src=shanxi-roadtrip-2026'}
+function renderSpots(){const q=document.querySelector('#search').value.trim().toLowerCase(),d=document.querySelector('#dayFilter').value,t=document.querySelector('#tierFilter').value;document.querySelector('#spotGrid').innerHTML=spots.map((x,i)=>{const h=heritage[x.n],hay=(JSON.stringify(x)+JSON.stringify(h||[])).toLowerCase(),hide=(q&&!hay.includes(q))||(d!=='all'&&x.d!==d)||(t!=='all'&&x.tier!==t);const src=S[x.src];return `<details id="spot-${x.n}" class="spot ${hide?'hidden':''}" data-i="${i}"><summary><div><span class="pill ${x.tier==='free'?'free':x.tier==='must'?'verified':'pattern'}">${tier(x.tier)}</span><span class="pill ${cls(x.status)}">${lab(x.status)}</span><h3>${x.n}</h3><p>${x.d} · ${x.kind}</p></div></summary><div class="body"><div class="facts"><div class="fact"><b>运营时间</b>${x.time}</div><div class="fact"><b>门票</b>${x.fee}</div><div class="fact"><b>预约/抢票</b>${x.book}</div><div class="fact"><b>本次安排</b>${x.route}</div></div>${h?`<h4>时代与文物背景</h4><p>${h[0]}</p><h4>现场识读：具体看什么</h4><p>${h[1]}</p>`:''}<h4>为什么值得看</h4><p>${x.intro}</p><h4>到场怎么逛</h4><p>${x.look}</p><h4>攻略提醒</h4><p>${x.tips}</p><h4>晚点切法</h4><p>${x.late}</p><h4>天气备份</h4><p>${x.weather}</p><div class="actions"><a target="_blank" rel="noopener" href="${amap(x.n)}">高德查准确入口 ↗</a><a target="_blank" rel="noopener" href="${src[1]}">${src[0]} ↗</a></div></div></details>`}).join('')}
+document.querySelector('#timeline').innerHTML=radar.map((r,i)=>`<div class="event ${i===1||i===5||i===8?'urgent':''}"><time>${r[0]}</time><div><label><input type="checkbox" data-check="${i}"> <b>${r[1]}</b></label><br><span class="muted">${r[2]}</span></div></div>`).join('');
+Object.values(S).forEach(v=>document.querySelector('#sourceList').insertAdjacentHTML('beforeend',`<li><a target="_blank" rel="noopener" href="${v[1]}">${v[0]}</a></li>`));
+['search','dayFilter','tierFilter'].forEach(id=>document.getElementById(id).addEventListener(id==='search'?'input':'change',renderSpots));renderSpots();
+document.querySelectorAll('[data-check]').forEach(c=>{const k='sx-roadtrip-v3-'+c.dataset.check;try{c.checked=localStorage.getItem(k)==='1'}catch(e){};c.closest('label').classList.toggle('done',c.checked);c.onchange=()=>{c.closest('label').classList.toggle('done',c.checked);try{localStorage.setItem(k,c.checked?'1':'0')}catch(e){}}});
+function icsDate(s){return s.replace(/[-: ]/g,'').slice(0,8)}
+document.querySelector('#downloadIcs').onclick=()=>{let out=['BEGIN:VCALENDAR','VERSION:2.0','PRODID:-//Shanxi Roadtrip 2026//CN','CALSCALE:GREGORIAN','X-WR-CALNAME:山西自驾抢票提醒'];const events=[['20260916T090000','T-14：复核山西国庆开放公告'],['20260919T090000','云冈石窟10月4日预约'],['20260925T200000','小西天抢票预提醒'],['20260926T080000','小西天10月2日预约窗口'],['20260928T071500','悬空寺抢票预提醒'],['20260929T072000','悬空寺10月5日末时段登临票'],['20260929T090000','车辆与离线资料T-1检查'],['20261004T235500','五台山预约预提醒'],['20261005T000000','五台山10月6日游客与车辆预约']];events.forEach((e,i)=>out.push('BEGIN:VEVENT','UID:sx2026-'+i+'@trip','DTSTART;TZID=Asia/Shanghai:'+e[0],'DURATION:PT45M','SUMMARY:'+e[1],'DESCRIPTION:以官方小程序当时显示的可售日期和公告为准。','BEGIN:VALARM','ACTION:DISPLAY','TRIGGER:-PT15M','DESCRIPTION:'+e[1],'END:VALARM','END:VEVENT'));out.push('END:VCALENDAR');const u=URL.createObjectURL(new Blob([out.join('\r\n')],{type:'text/calendar'})),a=document.createElement('a');a.href=u;a.download='山西自驾-抢票提醒-v3.ics';a.click();setTimeout(()=>URL.revokeObjectURL(u),1000)};
+</script>
+</body>
+</html>
